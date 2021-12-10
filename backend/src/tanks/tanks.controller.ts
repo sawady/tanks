@@ -22,8 +22,12 @@ export class TanksController {
   }
 
   @Get()
-  findAll(@Query('page') page: number, @Query('pageSize') pageSize: number) {
-    return this.tanksService.findAll(page, pageSize);
+  findAll(
+    @Query('page') page: number,
+    @Query('pageSize') pageSize: number,
+    @Query('withDeleted') withDeleted: boolean,
+  ) {
+    return this.tanksService.findAll({ page, pageSize, withDeleted });
   }
 
   @Get(':id')

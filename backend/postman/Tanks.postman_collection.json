@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "4a0eb9ac-272e-488a-bc11-cd14426690fd",
+		"name": "Tanks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "tanks",
+			"item": [
+				{
+					"name": "find all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tanks",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tanks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"serialNumber\": \"2\",\n    \"lot\": \"2\",\n    \"manufacturer\": \"2\",\n    \"gasType\": \"2\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/tanks",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tanks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tanks/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tanks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tanks/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tanks",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

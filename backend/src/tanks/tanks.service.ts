@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { PageRequest } from 'src/common/page';
 import CRUDService from 'src/common/service';
 import { Repository } from 'typeorm';
 import { CreateTankDto } from './dto/create-tank.dto';
@@ -20,8 +21,8 @@ export class TanksService extends CRUDService<Tank> {
     return this.repository.save(createTankDto);
   }
 
-  findAll(page: number, pageSize: number) {
-    return this.findPaginated(page, pageSize);
+  findAll(pageRequest: PageRequest) {
+    return this.findPaginated(pageRequest);
   }
 
   findOne(id: number) {
@@ -35,6 +36,6 @@ export class TanksService extends CRUDService<Tank> {
 
   // TODO: make soft delete
   remove(id: number) {
-    return this.repository.delete(id);
+    return this.repository.softDelete(id);
   }
 }

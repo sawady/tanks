@@ -1,4 +1,11 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  CreateDateColumn,
+  UpdateDateColumn,
+  DeleteDateColumn,
+} from 'typeorm';
 
 @Entity()
 export class Tank {
@@ -16,4 +23,13 @@ export class Tank {
 
   @Column()
   gasType: string;
+
+  @CreateDateColumn({ type: 'timestamp' })
+  createdDate: Date;
+
+  @UpdateDateColumn({ type: 'timestamp' })
+  updatedDate: Date;
+
+  @DeleteDateColumn({ type: 'timestamp' })
+  deletedDate: Date;
 }

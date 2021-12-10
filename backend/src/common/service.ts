@@ -5,13 +5,18 @@ import {
   FindOneOptions,
   Repository as TRepository,
 } from 'typeorm';
-import { Page, PageOffset } from './page';
+import { Page, PageOffset, PageRequest } from './page';
 
 export default class CRUDService<Entity> {
   protected repository: TRepository<Entity>;
 
-  public async findPaginated(page = 0, pageSize = 10): Promise<Page<Entity>> {
+  public async findPaginated({
+    page = 0,
+    pageSize = 10,
+    withDeleted = false,
+  }: PageRequest): Promise<Page<Entity>> {
     const [items, total] = await this.repository.findAndCount({
+      withDeleted,
       skip: page * pageSize,
       take: pageSize,
     });
