@@ -1,6 +1,6 @@
 # tanks
 
-Poof of concepto with NestJS and Sveltekit
+Poof of concept with NestJS and Sveltekit
 
 ## TODO
 
