@@ -7,6 +7,7 @@ import {
   Param,
   Delete,
   Query,
+  ParseIntPipe,
 } from '@nestjs/common';
 import { TanksService } from './tanks.service';
 import { CreateTankDto } from './dto/create-tank.dto';
@@ -31,17 +32,17 @@ export class TanksController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.tanksService.findOne(+id);
+  findOne(@Param('id', ParseIntPipe) id: number) {
+    return this.tanksService.findOne(id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateTankDto: UpdateTankDto) {
-    return this.tanksService.update(+id, updateTankDto);
+  update(@Param('id', ParseIntPipe) id: number, @Body() updateTankDto: UpdateTankDto) {
+    return this.tanksService.update(id, updateTankDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.tanksService.remove(+id);
+  remove(@Param('id', ParseIntPipe) id: number) {
+    return this.tanksService.remove(id);
   }
 }
