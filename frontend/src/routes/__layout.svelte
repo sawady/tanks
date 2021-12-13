@@ -56,8 +56,22 @@
 		box-shadow: none;
 		transition: 0.25s;
 		display: block;
-		width: 250px;
+		min-width: 130px;
 		margin: 0 auto;
+		cursor: pointer;
+	}
+
+	.btn-rounded {
+		border: 2px solid transparent;
+		color: #ffffff;
+		border-radius: 3px;
+		transition: 0.25s;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+
+	.btn-large {
+		width: 250px;
 	}
 
 	.btn-primary {
@@ -66,5 +80,30 @@
 
 	.btn-primary:hover {
 		background-color: #2980b9;
+	}
+
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	th,
+	td {
+		text-align: left;
+		padding: 8px;
+	}
+
+	tr:nth-child(even) {
+		background-color: #f2f2f2;
+	}
+
+	th {
+		background-color: #3498db;
+		color: white;
+	}
+
+	.header {
+		float: right;
+		margin-bottom: 15px;
 	}
 </style>

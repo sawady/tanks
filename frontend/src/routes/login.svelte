@@ -28,7 +28,7 @@
 				/>
 			</div>
 
-			<button class="btn btn-primary" on:click={login}>login</button>
+			<button class="btn btn-primary btn-large" on:click={login}>login</button>
 			<!-- <a class="login-link" href="#">Lost your password?</a> -->
 		</div>
 	</div>
