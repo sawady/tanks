@@ -1,6 +1,6 @@
 <script>
-	import Table from '../../../lib/table.svelte';
-	import Pagination from '../../../lib/pagination.svelte';
+	import Table from '../../../lib/components/table.svelte';
+	import Pagination from '../../../lib/components/pagination.svelte';
 
 	const columns = [
 		{
