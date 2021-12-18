@@ -3,14 +3,14 @@
 	import Pagination from '../../../lib/components/pagination.svelte';
 	import { onMount } from 'svelte';
 
-    let items;
-    onMount(async () => {
-			await fetch(`http://localhost:3001/tanks`)
-			.then(r => r.json())
-			.then(data => {
-				items = data.items;
-			});
-    })
+	let items;
+	onMount(async () => {
+		await fetch(`http://localhost:3001/tanks`)
+		.then(r => r.json())
+		.then(data => {
+			items = data.items;
+		});
+	})
 
 	const columns = [
 		{
