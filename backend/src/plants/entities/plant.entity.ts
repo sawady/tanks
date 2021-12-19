@@ -15,6 +15,12 @@ export class Plant {
   @Column()
   address: string;
 
+  @Column()
+  name: string;
+
+  @Column()
+  cuit: string;
+
   @Column({ default: false })
   approved: boolean;
 

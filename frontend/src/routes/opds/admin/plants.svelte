@@ -1,6 +1,16 @@
 <script>
 	import Table from '../../../lib/components/table.svelte';
 	import Pagination from '../../../lib/components/pagination.svelte';
+	import { onMount } from 'svelte';
+
+	let items;
+	onMount(async () => {
+		await fetch(`http://localhost:3001/plants`)
+		.then(r => r.json())
+		.then(data => {
+			items = data.items;
+		});
+	})
 
 	const columns = [
 		{
@@ -14,24 +24,6 @@
 		{
 			title: 'Address',
 			field: 'address'
-		}
-	];
-
-	const items = [
-		{
-			name: 'Cosugas',
-			cuit: '123123123',
-			address: 'Colon 355 1º E'
-		},
-		{
-			name: 'Renault',
-			cuit: '123123123',
-			address: 'Colon 355 1º E'
-		},
-		{
-			name: 'Ford',
-			cuit: '123123123',
-			address: 'Colon 355 1º E'
 		}
 	];
 
