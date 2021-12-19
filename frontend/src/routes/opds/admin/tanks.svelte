@@ -43,7 +43,7 @@
 <h1>Tanks</h1>
 
 <div class="header">
-	<button class="btn btn-primary">Add tank</button>
+	<button class="btn btn-primary"><a href="/opds/addEdit/tanks">Add tank</a></button>
 </div>
 
 <Table {columns} {items} />

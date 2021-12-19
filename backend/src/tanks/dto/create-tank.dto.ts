@@ -15,7 +15,7 @@ export class CreateTankDto {
 
   @IsNotEmpty()
   @IsString()	
-  @Length(10, 40)
+  @Length(5, 40)
   manufacturer: string;
 
   @IsNotEmpty()
