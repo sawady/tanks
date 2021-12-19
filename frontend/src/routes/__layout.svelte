@@ -39,6 +39,17 @@
 		transition: border 0.5s;
 	}
 
+	select {
+		background-color: #ecf0f1;
+		border: 2px solid transparent;
+		border-radius: 3px;
+		font-size: 16px;
+		font-weight: 200;
+		padding: 10px 10px;
+		width: 250px;
+		transition: border 0.5s;
+	}
+
 	input:focus {
 		border: 2px solid #3498db;
 		box-shadow: none;

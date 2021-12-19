@@ -28,6 +28,13 @@
 				/>
 			</div>
 
+			<div class="control-group">
+				<select name="cars" id="cars">
+					<option value="PLANT">Plant</option>
+					<option value="OPDS">OPDS</option>
+				</select>
+			</div>
+
 			<button class="btn btn-primary btn-large" on:click={login}>login</button>
 			<!-- <a class="login-link" href="#">Lost your password?</a> -->
 		</div>
